@@ -11,8 +11,8 @@ import SwiftUI
 struct ProductDetailView: View {
         
     var product : Product
-    let transactions : [Transaction] = [Transaction(product: "T2006", amount: 34.55, currency: "CAD"),
-                                        Transaction(product: "T2006", amount: 22.35, currency: "EUR")]
+    
+    @StateObject var vm = ProductDetailViewModel()
     
     var body: some View {
         VStack {
@@ -26,7 +26,7 @@ struct ProductDetailView: View {
                 .padding(.top)
             
             // Transactions
-            List(transactions) { transaction in
+            List(vm.productTransactions) { transaction in
               VStack(alignment: .leading) {
                   Text("\(transaction.currency) \(transaction.amount)")
                       .font(.subheadline)
