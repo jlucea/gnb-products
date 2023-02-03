@@ -12,14 +12,22 @@ struct ProductListView: View {
     @StateObject var vm = ProductListViewModel()
     
     var body: some View {
+        
         VStack {
-            List(vm.products) { product in
-              VStack(alignment: .leading) {
-                  Text(product.name)
-                      .font(.headline)
-              }
+            NavigationView {
+                List {
+                    ForEach(vm.products) { product in
+                        NavigationLink (
+                            destination: ProductDetailView(product: product),
+                            label: {
+                                Text(product.name)
+                                    .font(.subheadline)
+                            })
+                    }
+                }
             }
         }
+        .navigationTitle("GNB Products")
         .padding()
     }
     

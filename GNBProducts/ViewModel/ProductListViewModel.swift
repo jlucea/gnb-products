@@ -29,6 +29,10 @@ class ProductListViewModel : ObservableObject {
         }
     }
     
+    func getProductTransactions(product: Product) -> [Transaction] {
+        return transactions.filter { $0.sku == product.name }
+    }
+    
     func loadData(){
         TransactionsWS().getJSONData { (result) in
             switch result {

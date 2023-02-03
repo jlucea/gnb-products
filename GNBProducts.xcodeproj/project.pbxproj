@@ -10,6 +10,7 @@
 		6F355096298D39EA002B5EC8 /* ConversionRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F355095298D39EA002B5EC8 /* ConversionRate.swift */; };
 		6F355099298D3AB2002B5EC8 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F355098298D3AB2002B5EC8 /* ProductListViewModel.swift */; };
 		6F35509B298D46A8002B5EC8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F35509A298D46A8002B5EC8 /* Product.swift */; };
+		6F35509D298D51E2002B5EC8 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F35509C298D51E2002B5EC8 /* ProductDetailView.swift */; };
 		6F9504F629894FC200B4F6DB /* GNBProductsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9504F529894FC200B4F6DB /* GNBProductsApp.swift */; };
 		6F9504F829894FC200B4F6DB /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9504F729894FC200B4F6DB /* ProductListView.swift */; };
 		6F9504FA29894FC400B4F6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F9504F929894FC400B4F6DB /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		6F355095298D39EA002B5EC8 /* ConversionRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionRate.swift; sourceTree = "<group>"; };
 		6F355098298D3AB2002B5EC8 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		6F35509A298D46A8002B5EC8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		6F35509C298D51E2002B5EC8 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		6F9504F229894FC200B4F6DB /* GNBProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GNBProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F9504F529894FC200B4F6DB /* GNBProductsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNBProductsApp.swift; sourceTree = "<group>"; };
 		6F9504F729894FC200B4F6DB /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				6F9504F729894FC200B4F6DB /* ProductListView.swift */,
+				6F35509C298D51E2002B5EC8 /* ProductDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			files = (
 				6F9505082989553C00B4F6DB /* ConversionService.swift in Sources */,
 				6F9504F829894FC200B4F6DB /* ProductListView.swift in Sources */,
+				6F35509D298D51E2002B5EC8 /* ProductDetailView.swift in Sources */,
 				6F95050A2989592100B4F6DB /* TransactionsWS.swift in Sources */,
 				6F95050E29895C2F00B4F6DB /* URLConstants.swift in Sources */,
 				6F9505102989653B00B4F6DB /* Transaction.swift in Sources */,
