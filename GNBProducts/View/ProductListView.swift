@@ -25,12 +25,13 @@ struct ProductListView: View {
                             })
                     }
                 }
+                .navigationTitle("Products")
+            }
+            .onAppear() {
+                vm.fetchProducts()
             }
         }
-        .navigationTitle("GNB Products")
-        .padding()
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {

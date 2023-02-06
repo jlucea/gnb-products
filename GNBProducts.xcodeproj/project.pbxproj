@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F1682D129913263009A353C /* TransactionDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1682D029913263009A353C /* TransactionDataTransformer.swift */; };
+		6F1682D42991340D009A353C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1682D32991340D009A353C /* DataProvider.swift */; };
 		6F355096298D39EA002B5EC8 /* ConversionRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F355095298D39EA002B5EC8 /* ConversionRate.swift */; };
 		6F355099298D3AB2002B5EC8 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F355098298D3AB2002B5EC8 /* ProductListViewModel.swift */; };
 		6F35509B298D46A8002B5EC8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F35509A298D46A8002B5EC8 /* Product.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F1682D029913263009A353C /* TransactionDataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDataTransformer.swift; sourceTree = "<group>"; };
+		6F1682D32991340D009A353C /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		6F355095298D39EA002B5EC8 /* ConversionRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionRate.swift; sourceTree = "<group>"; };
 		6F355098298D3AB2002B5EC8 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		6F35509A298D46A8002B5EC8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -52,6 +56,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F1682CF2991324C009A353C /* DataTransformer */ = {
+			isa = PBXGroup;
+			children = (
+				6F1682D029913263009A353C /* TransactionDataTransformer.swift */,
+			);
+			path = DataTransformer;
+			sourceTree = "<group>";
+		};
+		6F1682D2299133F5009A353C /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				6F1682D32991340D009A353C /* DataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
 		6F355097298D3A90002B5EC8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +102,8 @@
 			children = (
 				6F95050329894FCF00B4F6DB /* View */,
 				6F355097298D3A90002B5EC8 /* ViewModel */,
+				6F1682D2299133F5009A353C /* DataProvider */,
+				6F1682CF2991324C009A353C /* DataTransformer */,
 				6F95050429894FE300B4F6DB /* Service */,
 				6F9505052989500500B4F6DB /* Model */,
 				6F9505062989501B00B4F6DB /* Network */,
@@ -207,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F1682D129913263009A353C /* TransactionDataTransformer.swift in Sources */,
 				6F9505082989553C00B4F6DB /* ConversionService.swift in Sources */,
 				6F9504F829894FC200B4F6DB /* ProductListView.swift in Sources */,
 				6F35509D298D51E2002B5EC8 /* ProductDetailView.swift in Sources */,
@@ -216,6 +239,7 @@
 				6F355099298D3AB2002B5EC8 /* ProductListViewModel.swift in Sources */,
 				6F95050C29895B4A00B4F6DB /* TransactionService.swift in Sources */,
 				6F35509B298D46A8002B5EC8 /* Product.swift in Sources */,
+				6F1682D42991340D009A353C /* DataProvider.swift in Sources */,
 				6F9504F629894FC200B4F6DB /* GNBProductsApp.swift in Sources */,
 				6F355096298D39EA002B5EC8 /* ConversionRate.swift in Sources */,
 				6F35509F298D59BD002B5EC8 /* ProductDetailViewModel.swift in Sources */,
