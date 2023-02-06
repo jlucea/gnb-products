@@ -48,5 +48,10 @@ class TransactionDataTransformer {
             return []
         }
     }
+    
+    func filterByProduct(transactions: [Transaction], product: Product) -> [Transaction] {
+        return transactions.filter({ $0.sku == product.name } )
+    }
+    
         
 }

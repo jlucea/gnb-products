@@ -9,15 +9,13 @@ import SwiftUI
 
 
 struct ProductDetailView: View {
-        
-    var product : Product
-    
-    @StateObject var vm = ProductDetailViewModel()
+            
+    @ObservedObject var vm : ProductDetailViewModel
     
     var body: some View {
         VStack {
             // Product name
-            Text(product.name)
+            Text(vm.product.name)
                 .font(.headline)
                 .padding(.top)
             
@@ -32,23 +30,26 @@ struct ProductDetailView: View {
                       .font(.subheadline)
               }
             }
+            .onAppear(){
+                vm.fetchTransactions()
+            }
         }
         .padding()
     }
     
 }
 
-struct ProductDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductDetailView(
-            product: Product(name: "T2006")
-//            transactions:  [Transaction(product: "T2006", amount: 34.55, currency: "CAD"),
-//                            Transaction(product: "T2006", amount: 22.35, currency: "EUR"),
-//                            Transaction(product: "T2006", amount: 11.95, currency: "CAD"),
-//                            Transaction(product: "T2006", amount: 09.5, currency: "USD"),
-//                            Transaction(product: "T2006", amount: 88.11, currency: "EUR"),
-//                            Transaction(product: "T2006", amount: 467.22, currency: "EUR")
-//                           ]
-        )
-    }
-}
+//struct ProductDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProductDetailView(
+//            product: Product(name: "T2006")
+////            transactions:  [Transaction(product: "T2006", amount: 34.55, currency: "CAD"),
+////                            Transaction(product: "T2006", amount: 22.35, currency: "EUR"),
+////                            Transaction(product: "T2006", amount: 11.95, currency: "CAD"),
+////                            Transaction(product: "T2006", amount: 09.5, currency: "USD"),
+////                            Transaction(product: "T2006", amount: 88.11, currency: "EUR"),
+////                            Transaction(product: "T2006", amount: 467.22, currency: "EUR")
+////                           ]
+//        )
+//    }
+//}

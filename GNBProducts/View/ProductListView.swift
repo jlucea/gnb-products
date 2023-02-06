@@ -9,20 +9,17 @@ import SwiftUI
 
 struct ProductListView: View {
         
-    @StateObject var vm = ProductListViewModel()
+    @ObservedObject var vm = ProductListViewModel()
+    
+    // @Binding var selectedProduct: Product?
     
     var body: some View {
         
         VStack {
             NavigationView {
-                List {
-                    ForEach(vm.products) { product in
-                        NavigationLink (
-                            destination: ProductDetailView(product: product),
-                            label: {
-                                Text(product.name)
-                                    .font(.subheadline)
-                            })
+                List(vm.products) { product in
+                    NavigationLink (destination: ProductDetailView(vm: ProductDetailViewModel(product: product))) {
+                        Text(product.name).font(.subheadline)
                     }
                 }
                 .navigationTitle("Products")

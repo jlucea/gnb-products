@@ -7,54 +7,30 @@
 
 import Foundation
 
-extension ProductListView {
     
-    @MainActor class ProductListViewModel : ObservableObject {
-        
-        @Published var products = [Product]()
-        
-        //
-        // Calls the transaction API and populates both the published products property
-        //
-//        func fetchProducts() {
-//            TransactionsWS().getJSONData { (result) in
-//                switch result {
-//                    case .success(let data):
-//                        // Data from web service received
-//                        if let products : [Product] = TransactionDataTransformer().transform(transactionDataJSON: data) {
-//                            // Published data is uptaded in the main thread
-//                            DispatchQueue.main.async { () -> Void in
-//                                self.products = products
-//                                print("\(self.products.count) products loaded")
-//                            }
-//                        }
-//                    case .failure(let error):
-//                        print(error.localizedDescription)
-//                }
-//            }
-//        }
-        
-        
-        //
-        // Requests data to DataProvider, transforms with DataTransformer and populates published products property
-        //
-        func fetchProducts() {
-            
-            let dp = DataProvider()
-            dp.getTransactions { (result) in
-                
-                switch result {
+@MainActor class ProductListViewModel : ObservableObject {
+    
+    @Published var products = [Product]()
+    
+    // var selectedProduct: Product?
+    
+    //
+    // Loads and publishes products
+    //
+    func fetchProducts() {
+        // Request data from provider
+        DataProvider.shared.getTransactions { (result) in
+            switch result {
                 case .success(let data):
+                    // Get list of products from the received transaction data
                     self.products = TransactionDataTransformer().transform(transactions: data)
                     
                 case .failure(let error):
                     print(error.localizedDescription)
-                }
             }
         }
-
-        
     }
 
+    
 }
 
