@@ -11,4 +11,6 @@ struct URLConstants {
     
     static let TRANSACTIONS_WEBSERVICE_URL = "https://android-ios-service.herokuapp.com/transactions"
     
+    static let EXCHANGE_RATES_WEBSERVICE_URL = "https://android-ios-service.herokuapp.com/rates"
+    
 }

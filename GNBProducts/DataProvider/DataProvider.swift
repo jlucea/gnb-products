@@ -16,6 +16,7 @@ class DataProvider {
     static let shared = DataProvider()
     
     private var transactions : [Transaction]?
+    private var rates : [ConversionRate]?
     
     private init() {}
     
@@ -54,6 +55,39 @@ class DataProvider {
     }
     
     
+    func getRates(completion: @escaping (Result<[ConversionRate], Error>) -> Void) {
+        if rates?.isEmpty == false {
+            // Return transactions stored in memory
+            print("Recovering rates data from memory")
+            completion(.success(rates!))
+            
+        } else {
+            // Call web service
+            print("Requesting rates to webservice")
+            fetchRates(completion: completion)
+        }
+    }
+    
+    private func fetchRates(completion: @escaping (Result<[ConversionRate], Error>) -> Void) {
+        // Call web service
+        ExchangeRatesWS().getJSONData { (result) in
+            switch result {
+                case .success(let data):
+                    // Data from web service received
+                    print("Transaction data received from API")
+                    if let crates : [ConversionRate] = ConversionRateTransformer().transform(ratesJSON: data) {
+                        // Published data is uptaded in the main thread
+                        DispatchQueue.main.async { () -> Void in
+                            self.rates = crates
+                            completion(.success(self.rates!))
+                        }
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    completion(.failure(error))
+            }
+        }
+    }
     
     
 }

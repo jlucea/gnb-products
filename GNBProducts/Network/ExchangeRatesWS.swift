@@ -1,20 +1,20 @@
 //
-//  TransactionsWS.swift
+//  ExchangeRatesWS.swift
 //  GNBProducts
 //
-//  Created by Jaime Lucea on 31/1/23.
+//  Created by Jaime Lucea on 6/2/23.
 //
 
 import Foundation
 
-class TransactionsWS {
+class ExchangeRatesWS {
     
     //
     // Asynchronously gets transaction data from the server and executes the completion function afterwards
     //
     func getJSONData(completion: @escaping (Result<Data, Error>) -> Void) {
         
-        guard let url = URL(string: URLConstants.TRANSACTIONS_WEBSERVICE_URL) else {
+        guard let url = URL(string: URLConstants.EXCHANGE_RATES_WEBSERVICE_URL) else {
             completion(.failure(URLError(.badURL)))
             return
         }

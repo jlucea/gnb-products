@@ -20,8 +20,8 @@ struct ProductDetailView: View {
                 .padding(.top)
             
             // Total sum in EUR
-            Text("EUR 4223.89")
-                .padding(.top)
+            let formattedTotal = String(format: "%.2f", vm.totalAmount)
+            Text(formattedTotal)
             
             // Transactions
             List(vm.productTransactions) { transaction in
@@ -34,22 +34,12 @@ struct ProductDetailView: View {
                 vm.fetchTransactions()
             }
         }
-        .padding()
     }
     
 }
 
-//struct ProductDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProductDetailView(
-//            product: Product(name: "T2006")
-////            transactions:  [Transaction(product: "T2006", amount: 34.55, currency: "CAD"),
-////                            Transaction(product: "T2006", amount: 22.35, currency: "EUR"),
-////                            Transaction(product: "T2006", amount: 11.95, currency: "CAD"),
-////                            Transaction(product: "T2006", amount: 09.5, currency: "USD"),
-////                            Transaction(product: "T2006", amount: 88.11, currency: "EUR"),
-////                            Transaction(product: "T2006", amount: 467.22, currency: "EUR")
-////                           ]
-//        )
-//    }
-//}
+struct ProductDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProductDetailView(vm: ProductDetailViewModel(product: Product(name: "T5555")))
+    }
+}

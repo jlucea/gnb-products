@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6F1682D129913263009A353C /* TransactionDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1682D029913263009A353C /* TransactionDataTransformer.swift */; };
 		6F1682D42991340D009A353C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1682D32991340D009A353C /* DataProvider.swift */; };
+		6F1682D629916114009A353C /* ExchangeRatesWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1682D529916114009A353C /* ExchangeRatesWS.swift */; };
+		6F1682D82991627A009A353C /* ConversionRateTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1682D72991627A009A353C /* ConversionRateTransformer.swift */; };
 		6F355096298D39EA002B5EC8 /* ConversionRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F355095298D39EA002B5EC8 /* ConversionRate.swift */; };
 		6F355099298D3AB2002B5EC8 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F355098298D3AB2002B5EC8 /* ProductListViewModel.swift */; };
 		6F35509B298D46A8002B5EC8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F35509A298D46A8002B5EC8 /* Product.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		6F1682D029913263009A353C /* TransactionDataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDataTransformer.swift; sourceTree = "<group>"; };
 		6F1682D32991340D009A353C /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		6F1682D529916114009A353C /* ExchangeRatesWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesWS.swift; sourceTree = "<group>"; };
+		6F1682D72991627A009A353C /* ConversionRateTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionRateTransformer.swift; sourceTree = "<group>"; };
 		6F355095298D39EA002B5EC8 /* ConversionRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionRate.swift; sourceTree = "<group>"; };
 		6F355098298D3AB2002B5EC8 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		6F35509A298D46A8002B5EC8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				6F1682D029913263009A353C /* TransactionDataTransformer.swift */,
+				6F1682D72991627A009A353C /* ConversionRateTransformer.swift */,
 			);
 			path = DataTransformer;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				6F9505092989592100B4F6DB /* TransactionsWS.swift */,
+				6F1682D529916114009A353C /* ExchangeRatesWS.swift */,
 				6F95050D29895C2F00B4F6DB /* URLConstants.swift */,
 			);
 			path = Network;
@@ -229,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F1682D629916114009A353C /* ExchangeRatesWS.swift in Sources */,
 				6F1682D129913263009A353C /* TransactionDataTransformer.swift in Sources */,
 				6F9505082989553C00B4F6DB /* ConversionService.swift in Sources */,
 				6F9504F829894FC200B4F6DB /* ProductListView.swift in Sources */,
@@ -243,6 +250,7 @@
 				6F9504F629894FC200B4F6DB /* GNBProductsApp.swift in Sources */,
 				6F355096298D39EA002B5EC8 /* ConversionRate.swift in Sources */,
 				6F35509F298D59BD002B5EC8 /* ProductDetailViewModel.swift in Sources */,
+				6F1682D82991627A009A353C /* ConversionRateTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

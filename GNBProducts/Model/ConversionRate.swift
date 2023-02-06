@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ConversionRate {
-    let currency1: String
-    let currency2: String
-    let double: Double
+struct ConversionRate : Decodable {
+    let from: String
+    let to: String
+    let rate: Double
 }
